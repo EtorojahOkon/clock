@@ -1,0 +1,39 @@
+/* -- Border is required for #clock-face top-margin to work
+      in this case, I used a transparent border
+      because it doesn't really *need* to be visualized -- */
+      div { border: 1px solid transparent; }
+      /* -- The outside rim of the clock with gradient -- */
+      #clock-rim {
+        display: block;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(gray, black);
+        border-radius: 150px;
+      }
+      /* -- Clock's face -- */
+      #clock-face {
+        display: block;
+        position: relative;  
+        width: 260px;
+        height: 260px;
+        margin: 19px auto;
+        border-radius: 150px;
+        background: white;
+      }
+      /* -- Second hand -- */
+      #second { position: absolute; top: 123px; left: 128px; width: 100px; height: 2px; border: 1px solid transparent; border-radius: 5px; transform: unset; background: green; transform-origin: 1px 1px; }
+      /* -- Minute hand -- */
+      #minute { position: absolute; top: 123px; left: 128px; width: 100px; height: 4px; border: 1px solid transparent; border-radius: 5px; transform: unset; background: red; transform-origin: 2px 2px; }
+      /* -- Hour hand -- */
+      #hour { position: absolute; top: 123px; left: 128px; width: 50px; height: 4px; border: 1px solid transparent; border-radius: 5px; transform: unset; background: blue; transform-origin: 2px 2px; }
+      /* -- Center of the clock -- */
+      #center { position: absolute; top: 118px; left: 120px; width: 16px; height: 16px; background: white; border: 1px solid gray; border-radius: 16px; }
+      /* -- "HTML clock"  in a box -- */
+      #brand { position: absolute; top: 110px; left: 165px; border: 1px solid gray; border-radius: 5px; width: 50px; height: 40px; font-family: Verdana; font-size: 11px; text-align: center; line-height: 20px; }
+      /* -- Notches container -- */
+      #notch-container { width: 260px; height: 260px }
+      /* -- Hourly notch (thicker, but sparse) -- */
+      .notch { position: absolute; width: 10px; height: 2px; background: black; border-radius: 5px 5px 5px 5px; }
+      /* -- Minute notch (thin) -- */
+      .thin { position: absolute; width: 10px; height: 1px; border-top: 1px solid gray; }
